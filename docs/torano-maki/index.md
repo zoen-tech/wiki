@@ -30,22 +30,18 @@
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-compass:{ .lg .middle } **ミッション・ビジョン**
+-   🧭 &nbsp; **[ミッション・ビジョン](mission-vision.md)**
 
     ---
 
     **「真摯な努力を結実させる」**
     なぜ私たちがこの旗を掲げるのか、その背景と覚悟。
 
-    [:octicons-arrow-right-24: 読む](mission-vision.md)
-
--   :fontawesome-solid-list-check:{ .lg .middle } **バリュー・行動指針**
+-   📋 &nbsp; **[バリュー・行動指針](values.md)**
 
     ---
 
     MVV を実現するための、日々の具体的な行動指針7か条。
-
-    [:octicons-arrow-right-24: 読む](values.md)
 
 </div>
 
