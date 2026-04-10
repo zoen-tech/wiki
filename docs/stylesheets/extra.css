@@ -18,13 +18,13 @@
 
 /* Light scheme */
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color:        #ffffff;
-  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color:        var(--zoen-primary);
+  --md-primary-fg-color--light: var(--zoen-primary-light);
   --md-primary-fg-color--dark:  var(--zoen-primary-dark);
-  --md-primary-bg-color:        #333333;
-  --md-primary-bg-color--light: #646464;
+  --md-primary-bg-color:        #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
 
-  --md-accent-fg-color:         var(--zoen-primary);
+  --md-accent-fg-color:         var(--zoen-primary-dark);
   --md-accent-fg-color--transparent: rgba(0, 154, 162, 0.1);
   --md-accent-bg-color:         #ffffff;
   --md-accent-bg-color--light:  #ffffffb3;
@@ -45,40 +45,44 @@
 }
 
 /* ============================================================
-   Header
+   Header (teal background with white knockout logo)
    ============================================================ */
 [data-md-color-scheme="default"] .md-header {
-  background-color: #ffffff;
-  color: var(--zoen-text);
-  border-bottom: 1px solid var(--zoen-border);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  background-color: var(--zoen-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* Logo: 白抜き化（filter で白シルエット） */
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
   height: 1.9rem;
   width: auto;
+  filter: brightness(0) invert(1);
 }
 
 .md-header__title {
   font-weight: 600;
-  color: var(--zoen-text);
+  color: #ffffff;
 }
 
 [data-md-color-scheme="default"] .md-header__button {
-  color: var(--zoen-text);
+  color: #ffffff;
 }
 [data-md-color-scheme="default"] .md-search__input {
-  background-color: rgba(0, 0, 0, 0.04);
-  color: var(--zoen-text);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
 }
 [data-md-color-scheme="default"] .md-search__input::placeholder {
-  color: #888888;
+  color: rgba(255, 255, 255, 0.7);
+}
+[data-md-color-scheme="default"] .md-search__icon {
+  color: #ffffff;
 }
 
-/* Tabs bar (teal) */
+/* Tabs bar: 一段濃いティールで階層を表現 */
 [data-md-color-scheme="default"] .md-tabs {
-  background-color: var(--zoen-primary);
+  background-color: var(--zoen-primary-dark);
   color: #ffffff;
 }
 [data-md-color-scheme="default"] .md-tabs__link {
