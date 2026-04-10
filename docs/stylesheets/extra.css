@@ -1,0 +1,113 @@
+/* ZOEN-TECH ブランドカラー */
+:root {
+  --zoen-primary: #009aa2;
+  --zoen-primary-dark: #007a80;
+  --zoen-primary-light: #4dbdc3;
+  --zoen-accent: #1176d4;
+  --zoen-text: #333333;
+  --zoen-sub: #646464;
+}
+
+/* ライトモード: ヘッダーは白背景 + ティールアクセント */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #ffffff;
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark:  #007a80;
+  --md-primary-bg-color:        #333333;
+  --md-primary-bg-color--light: #646464;
+
+  --md-accent-fg-color:         #009aa2;
+  --md-accent-fg-color--transparent: #009aa21a;
+  --md-accent-bg-color:         #ffffff;
+  --md-accent-bg-color--light:  #ffffffb3;
+
+  --md-typeset-a-color:         #009aa2;
+}
+
+/* ヘッダーの下に境界線 */
+[data-md-color-scheme="default"] .md-header {
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* タブバー（ナビゲーション）はティール */
+[data-md-color-scheme="default"] .md-tabs {
+  background-color: #009aa2;
+  color: #ffffff;
+}
+[data-md-color-scheme="default"] .md-tabs__link {
+  color: #ffffff;
+}
+
+/* ダークモード */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #009aa2;
+  --md-primary-fg-color--light: #4dbdc3;
+  --md-primary-fg-color--dark:  #007a80;
+
+  --md-accent-fg-color:         #4dbdc3;
+  --md-accent-fg-color--transparent: #4dbdc31a;
+
+  --md-typeset-a-color:         #4dbdc3;
+}
+
+/* ヘッダーロゴサイズ調整 */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2rem;
+  width: auto;
+}
+
+/* タイトルフォント（白背景なので濃い色） */
+.md-header__title {
+  font-weight: 600;
+  color: #333333;
+}
+
+/* ヘッダーの検索・メニューアイコンを濃い色に */
+[data-md-color-scheme="default"] .md-header__button {
+  color: #333333;
+}
+[data-md-color-scheme="default"] .md-search__input {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: #333333;
+}
+[data-md-color-scheme="default"] .md-search__input::placeholder {
+  color: #888888;
+}
+
+/* リンクのホバー */
+.md-typeset a:hover {
+  color: var(--zoen-primary-dark);
+}
+
+/* admonition (note/tip/warning) のアクセントを ZOEN カラーに */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: var(--zoen-primary);
+}
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary {
+  background-color: rgba(0, 154, 162, 0.1);
+}
+.md-typeset .tip > .admonition-title::before,
+.md-typeset .tip > summary::before {
+  background-color: var(--zoen-primary);
+}
+
+/* テーブルのヘッダー */
+.md-typeset table:not([class]) th {
+  background-color: rgba(0, 154, 162, 0.08);
+  color: var(--zoen-text);
+}
+
+/* コードブロック内のキーワード色 */
+.md-typeset code {
+  color: var(--zoen-primary-dark);
+  background-color: rgba(0, 154, 162, 0.08);
+}
+
+/* フッター */
+.md-footer-meta {
+  background-color: var(--zoen-text);
+}

@@ -1,0 +1,92 @@
+site_name: ZOEN-TECH Wiki
+site_description: ZOEN-TECH 株式会社の社内Wiki：虎の巻（MVV）・マニュアル・ナレッジ・制度
+site_url: https://zoen-tech.github.io/wiki/
+repo_url: https://github.com/zoen-tech/wiki
+repo_name: zoen-tech/wiki
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: ja
+  logo: assets/logo-symbol.png
+  favicon: assets/favicon.png
+  font:
+    text: Noto Sans JP
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - ホーム: index.md
+  - 虎の巻:
+      - torano-maki/index.md
+      - ミッション・ビジョン: torano-maki/mission-vision.md
+      - バリュー・行動指針: torano-maki/values.md
+  - マニュアル:
+      - manuals/index.md
+      - Google Chat:
+          - manuals/google-chat/index.md
+          - 基本の使い方: manuals/google-chat/basics.md
+          - スレッド運用ルール: manuals/google-chat/thread-rules.md
+          - メンション運用ルール: manuals/google-chat/mention-rules.md
+          - タスク管理ルール: manuals/google-chat/task-management.md
+          - サマリBot（自動化）: manuals/google-chat/summary-bot.md
+          - スラッシュコマンド: manuals/google-chat/slash-commands.md
+  - ナレッジ:
+      - knowledge/index.md
+  - 制度・ルール:
+      - rules/index.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://zoen-tech.co.jp
+      name: ZOEN-TECH 公式サイト
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Copyright &copy; 2026 ZOEN-TECH 株式会社
