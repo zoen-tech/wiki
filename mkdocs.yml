@@ -89,4 +89,7 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/header-link.js
+
 copyright: Copyright &copy; 2026 ZOEN-TECH 株式会社
